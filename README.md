@@ -49,6 +49,7 @@ Also, infinite sub-comments!
 ## tech
 - [PureCSS](http://purecss.io/) for a simply beautiful interface
 - [AngularJS](https://angularjs.org/) for front-end functionality
+- [Yeoman](https://github.com/yeoman/generator-angular#readme) for scaffolding
 - [Firebase](https://www.firebase.com) for a RESTful back-end
 
 ## join the conversation
