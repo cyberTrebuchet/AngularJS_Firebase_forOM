@@ -1,5 +1,5 @@
 {
-  "name": "angularfirebaseforom",
+  "name": "forom",
   "private": true,
   "devDependencies": {
     "grunt": "^0.4.5",
