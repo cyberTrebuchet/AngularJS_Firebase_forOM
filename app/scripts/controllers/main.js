@@ -14,4 +14,7 @@ angular.module('forOM')
       $scope.todos.push($scope.todo);
       $scope.todo = '';
     };
+    $scope.nod = function (index) {
+      $scope.todos[index] += "+1";
+    };
   });
