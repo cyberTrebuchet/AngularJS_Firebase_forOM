@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('angularFirebaseForOmApp', [
+  .module('forOM', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
