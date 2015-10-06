@@ -8,8 +8,11 @@
  *
  * Main module of the application.
  */
-var app = angular
-  .module('forOM', [
+
+/* global app:true */
+/* exported app */
+
+var app = angular.module('forOM', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -18,18 +21,17 @@ var app = angular
     'ngTouch',
     'ui.sortable',
     'firebase'
-  ])
-  .config(function ($routeProvider) {
+  ]);
+
+app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        templateUrl: 'views/posts.html',
+        controller: 'PostsCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+        controller: 'AboutCtrl'
       })
       .otherwise({
         redirectTo: '/'
