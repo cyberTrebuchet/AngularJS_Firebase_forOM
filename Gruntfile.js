@@ -153,6 +153,27 @@ module.exports = function (grunt) {
       server: '.tmp'
     },
 
+    postcss: {
+      options: {
+        // map: true, // inline sourcemaps
+
+        // or
+        map: {
+            inline: false, // save all sourcemaps as separate files...
+            annotation: 'dist/css/maps/' // ...to the specified directory
+        },
+
+        processors: [
+          require('pixrem')(), // add fallbacks for rem units
+          require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+          require('cssnano')() // minify the result
+        ]
+      },
+      dist: {
+        src: 'css/*.css'
+      }
+    },
+
     // Add vendor prefixed styles
     autoprefixer: {
       options: {
@@ -441,6 +462,7 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-postcss');
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
